@@ -2,7 +2,7 @@
  
 Initial iteration of the chat UI for your reference. 
 
-https://marriage-certification-plugin-ui.vercel.app/assets/zencitizen-kaveriextension.jpg
+<img src="https://marriage-certification-plugin-ui.vercel.app/assets/zencitizen-kaveriextension.jpg"/>
 
 Additional notes:
 – Default to open, keeping the chat open on load
