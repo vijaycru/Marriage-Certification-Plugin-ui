@@ -1,0 +1,79 @@
+<svg
+                width="35px"
+                height="35px"
+                viewBox="-2.88 -2.88 29.76 29.76"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#fff"
+                stroke-width="0.9600000000000002"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#8c8787fd1c1c"
+                  stroke-width="0.144"
+                >
+                  <g clip-path="url(#8c8787clip0_15_144)">
+                    <rect width="24" height="24" fill="white"></rect>
+                    <rect
+                      x="9.5"
+                      y="3.5"
+                      width="5"
+                      height="12"
+                      rx="2.5"
+                      stroke="#8c8787"
+                      stroke-linejoin="round"
+                    ></rect>
+                    <path
+                      d="M17 12V13C17 15.7614 14.7614 18 12 18V18C9.23858 18 7 15.7614 7 13V12"
+                      stroke="#8c8787"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M12 18V21M12 21H9M12 21H15"
+                      stroke="#8c8787"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_15_144">
+                      <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </g>
+                <g id="SVGRepo_iconCarrier">
+                  <g clip-path="url(#8c8787clip0_15_144)">
+                    <rect width="24" height="24" fill="white"></rect>
+                    <rect
+                      x="9.5"
+                      y="3.5"
+                      width="5"
+                      height="12"
+                      rx="2.5"
+                      stroke="#8c8787"
+                      stroke-linejoin="round"
+                    ></rect>
+                    <path
+                      d="M17 12V13C17 15.7614 14.7614 18 12 18V18C9.23858 18 7 15.7614 7 13V12"
+                      stroke="#8c8787"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M12 18V21M12 21H9M12 21H15"
+                      stroke="#8c8787"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_15_144">
+                      <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </g>
+              </svg>
