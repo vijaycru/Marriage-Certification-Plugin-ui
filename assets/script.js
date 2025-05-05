@@ -4,6 +4,9 @@ const messageInput = document.querySelector(".message-input");
 const sendMessage = document.querySelector("#send-message");
 const chatbotToggler = document.querySelector("#chatbot-toggler");
 const closeChatbot = document.querySelector("#close-chatbot");
+const openChat = document.querySelector(".chat-open");
+const closeChat = document.querySelector(".chat-close");
+
 // API setup
 const API_KEY = "AIzaSyCfDpgNwuF324t-LThIYqjz-UxhBqjynZs";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
@@ -136,6 +139,24 @@ messageInput.addEventListener("keydown", (e) => {
 });
 sendMessage.addEventListener("click", (e) => handleOutgoingMessage(e));
 closeChatbot.addEventListener("click", () => chatBox.classList.add("hidden"));
-chatbotToggler.addEventListener("click", () =>
-  chatBox.classList.toggle("hidden")
-);
+chatbotToggler.addEventListener("click", () => {
+  openChat.classList.toggle("hidden");
+  openChat.classList.toggle("block");
+
+  closeChat.classList.toggle("hidden");
+  closeChat.classList.toggle("block");
+
+  if (chatBox.classList.contains("hidden")) {
+    chatBox.classList.remove("hidden");
+    setTimeout(() => {
+      chatBox.classList.remove("opacity-0", "scale-95");
+      chatBox.classList.add("opacity-100", "scale-100");
+    }, 10); // Small delay for smooth transition
+  } else {
+    chatBox.classList.remove("opacity-100", "scale-100");
+    chatBox.classList.add("opacity-0", "scale-95");
+    setTimeout(() => {
+      chatBox.classList.add("hidden");
+    }, 300); // Wait for animation before hiding
+  }
+});
