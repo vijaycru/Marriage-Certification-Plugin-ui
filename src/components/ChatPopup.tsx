@@ -29,7 +29,7 @@ const ChatPopup = ({ setTogglePopup, togglePopup }: ChatPopupProps) => {
     response: null,
     loading: false,
   });
-  const [apiEndpoint, setApiEndpoint] = useState("/api/chat");
+  const apiEndpoint = "/api/chat";
 
   const sendMessage = async (message: string) => {
     setMessage("");
@@ -79,21 +79,12 @@ const ChatPopup = ({ setTogglePopup, togglePopup }: ChatPopupProps) => {
     }, 100);
   };
 
-  const models = [
-    { label: "Gemini SDK", value: "/api/gemini" },
-    { label: "Gemini API", value: "/api/chat" },
-    { label: "OpenAI", value: "/api/openai", disabled: true },
-  ];
-
   return (
     <div
-      className="chatbot-popup fixed bottom-20 right-4 bg-gray-100 rounded-2xl shadow-lg flex flex-col overflow-hidden h-3/4 w-4/5 sm:w-3/5
+      className="chatbot-popup fixed bottom-20 right-4 bg-gray-100 rounded-2xl shadow-lg flex flex-col overflow-hidden h-4/6 xs:h-3/4 w-4/5 sm:w-3/5
     md:w-2/5  lg:w-4/12 xl:w-3/12 transition-all duration-300 ease-in-out opacity-100 scale-100"
     >
       <Header
-        apiEndpoint={apiEndpoint}
-        setApiEndpoint={setApiEndpoint}
-        models={models}
         setTogglePopup={setTogglePopup}
         togglePopup={togglePopup}
       />
