@@ -37,7 +37,7 @@ export const Form = ({
         }}
         disabled={formEvent.loading}
       ></textarea>
-      <div className="chat-controls flex items-center justify-between p-2">
+      <div className="chat-controls flex items-center justify-between p-2 cursor-pointer">
         <Mic className={textValue ? "hidden" : "block"} id="mic-button" />
         <SendHorizontal  onClick={(event) => {
             if (formEvent.loading) return;
