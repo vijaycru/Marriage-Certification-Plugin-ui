@@ -5,7 +5,7 @@ import {FeedbackContainer} from "./index";
 export const BotMessage = ({ value }: { value: string }) => {
   return (
     <div className="flex-col flex gap-1">
-      <div className="flex-row flex gap-2 items-center mt-5">
+      <div className="flex-row flex gap-2 items-center">
         <MessageSquareMore className="text-blue-600" />
         <span className="text-xs">Zen Citizen Bot</span>
       </div>
