@@ -28,49 +28,25 @@
       id="chatbot-toggler"
       class="fixed bottom-4 right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg focus:outline-none"
     >
-      <span class="material-symbols-rounded block">mode_comment</span>
-      <span class="material-symbols-rounded hidden">close</span>
+      <span class="material-symbols-rounded chat-open block">mode_comment</span>
+      <span class="material-symbols-rounded chat-close hidden">close</span>
     </button>
-
     <!-- Chatbot Popup -->
     <div
-      class="chatbot-popup fixed bottom-20 right-4 w-[328px] bg-gray-100 rounded-t-2xl shadow-lg flex flex-col overflow-hidden max-h-[650px]"
+      class="chatbot-popup fixed bottom-20 right-4 w-[328px] bg-gray-100 rounded-2xl shadow-lg flex flex-col overflow-hidden max-h-[550px] lg:max-h-[650px]"
     >
       <!-- Chatbot Header -->
       <div
-        class="chat-header flex justify-between items-center border-b border-gray-200 px-4 py-3 rounded-t-2xl bg-black"
+        class="chat-header flex justify-between items-center border-b border-gray-200 px-4 py-3 bg-black"
       >
-        <div class="header-info flex items-center">
-          <svg
-            fill="#ffffff"
-            width="40"
-            height="40"
-            viewBox="0 0 256.00 256.00"
-            id="Flat"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#ffffff"
-            stroke-width="0.00256"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke="#ffffff"
-              stroke-width="1.536"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <g opacity="0.2"><circle cx="128" cy="128" r="96"></circle></g>
-              <path
-                d="M128,24A104,104,0,1,0,232,128,104.11791,104.11791,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.09957,88.09957,0,0,1,128,216Zm12-88a12,12,0,1,1-12-12A12.01375,12.01375,0,0,1,140,128Zm48,0a12,12,0,1,1-12-12A12.01375,12.01375,0,0,1,188,128Zm-96,0a12,12,0,1,1-12-12A12.01375,12.01375,0,0,1,92,128Z"
-              ></path>
-            </g>
-          </svg>
-          <h2
-            class="logo-text text-md font-semibold ml-2 text-white text-underline"
-          >
+        <div class="header-info flex items-center gap-3">
+          <img src="/assets/svg/threeDot.svg" alt="" />
+          <h2 class="logo-text text-md font-semibold text-white text-underline">
             Ask Zen Citizen
           </h2>
+          <span class="bg-gray-200 border px-2 rounded-md text-[#013df5]"
+            >Beta</span
+          >
         </div>
         <button
           id="close-chatbot"
@@ -81,58 +57,13 @@
       </div>
 
       <!-- Chatbot Body -->
-      <div class="chat-body flex-1 p-4 overflow-y-auto max-h-[600px]">
+      <div
+        class="chat-body flex-1 p-4 overflow-y-auto max-h-[500px] lg:max-h-[600px]"
+      >
         <div class="message bot-message flex gap-4 flex-col gap-5 w-full">
           <div class="flex-col flex gap-1">
             <div class="flex-row flex gap-2 items-center">
-              <svg
-                fill="#013df5"
-                version="1.1"
-                id="Capa_1"
-                width="25"
-                height="25"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="-15.03 -15.03 73.00 73.00"
-                xml:space="preserve"
-                stroke="#013df5"
-                stroke-width="1.71752"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0">
-                  <rect
-                    x="-15.03"
-                    y="-15.03"
-                    width="73.00"
-                    height="73.00"
-                    rx="36.5"
-                    fill="#fff"
-                    strokewidth="0"
-                  ></rect>
-                </g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <g>
-                    <path
-                      d="M38.438,2.676H4.5c-2.485,0-4.5,2.016-4.5,4.5v22.238c0,2.484,2.015,4.5,4.5,4.5h25.783l4.953,5.012 c0.861,0.872,2.021,1.336,3.201,1.336c0.574,0,1.156-0.109,1.709-0.338c1.688-0.693,2.791-2.338,2.791-4.162V7.176 C42.938,4.692,40.924,2.676,38.438,2.676z M11.094,23.969c-2.691,0-4.875-2.184-4.875-4.875c0-2.691,2.184-4.875,4.875-4.875 s4.875,2.184,4.875,4.875C15.969,21.785,13.785,23.969,11.094,23.969z M21.469,23.969c-2.691,0-4.875-2.184-4.875-4.875 c0-2.691,2.184-4.875,4.875-4.875s4.875,2.184,4.875,4.875C26.344,21.785,24.16,23.969,21.469,23.969z M31.844,23.969 c-2.69,0-4.875-2.184-4.875-4.875c0-2.691,2.185-4.875,4.875-4.875c2.691,0,4.875,2.184,4.875,4.875 C36.719,21.785,34.535,23.969,31.844,23.969z"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-              <!-- <svg
-                class="chatbot-logo"
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 1024 1024"
-              >
-                <path
-                  d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"
-                />
-              </svg> -->
+              <img src="/assets/svg/logo.svg" alt="" />
               <span class="text-xs">Zen Citizen Bot</span>
             </div>
             <div
@@ -170,112 +101,32 @@
       </div>
 
       <!-- Chatbot Footer -->
-      <div class="chat-footer border border-gray-200 rounded-b-2xl">
-        <form action="#" class="chat-form flex flex-row bg-white">
+      <div class="chat-footer border border-gray-200">
+        <form
+          action="#"
+          class="chat-form flex flex-row items-center bg-white h-12"
+        >
           <textarea
             placeholder="Ask a question"
             required
-            class="message-input w-full p-2 ml-2 text-sm h-10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            class="message-input w-full p-2 ml-2 text-sm h-3/4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
           ></textarea>
           <div class="chat-controls flex items-center justify-between">
             <button
               type="button"
-              id="emoji-picker"
-              class="text-blue-600 p-1 hover:bg-gray-200 rounded-full transition"
+              id="microphone"
+              class="text-blue-600 p-1 hover:bg-whiterounded-full transition"
             >
-            <svg height="35" width="35"    viewBox="-2.88 -2.88 29.76 29.76" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke="#8c8787" stroke-width="0.9600000000000002" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-              <!-- <svg
-                width="35px"
-                height="35px"
-                viewBox="-2.88 -2.88 29.76 29.76"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                stroke="#fff"
-                stroke-width="0.9600000000000002"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke="#8c8787fd1c1c"
-                  stroke-width="0.144"
-                >
-                  <g clip-path="url(#8c8787clip0_15_144)">
-                    <rect width="24" height="24" fill="white"></rect>
-                    <rect
-                      x="9.5"
-                      y="3.5"
-                      width="5"
-                      height="12"
-                      rx="2.5"
-                      stroke="#8c8787"
-                      stroke-linejoin="round"
-                    ></rect>
-                    <path
-                      d="M17 12V13C17 15.7614 14.7614 18 12 18V18C9.23858 18 7 15.7614 7 13V12"
-                      stroke="#8c8787"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                    <path
-                      d="M12 18V21M12 21H9M12 21H15"
-                      stroke="#8c8787"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_15_144">
-                      <rect width="24" height="24" fill="white"></rect>
-                    </clipPath>
-                  </defs>
-                </g>
-                <g id="SVGRepo_iconCarrier">
-                  <g clip-path="url(#8c8787clip0_15_144)">
-                    <rect width="24" height="24" fill="white"></rect>
-                    <rect
-                      x="9.5"
-                      y="3.5"
-                      width="5"
-                      height="12"
-                      rx="2.5"
-                      stroke="#8c8787"
-                      stroke-linejoin="round"
-                    ></rect>
-                    <path
-                      d="M17 12V13C17 15.7614 14.7614 18 12 18V18C9.23858 18 7 15.7614 7 13V12"
-                      stroke="#8c8787"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                    <path
-                      d="M12 18V21M12 21H9M12 21H15"
-                      stroke="#8c8787"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_15_144">
-                      <rect width="24" height="24" fill="white"></rect>
-                    </clipPath>
-                  </defs>
-                </g>
-              </svg> -->
+              <img src="/assets/svg/mic.svg" alt="" />
             </button>
             <!-- File upload wrapper is commented out in the original code -->
-            <!-- <button
-              type="submit"
-              id="send-message"
-              class="material-symbols-rounded bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition"
-            >
-              arrow_upward
-            </button> -->
+            <button type="submit" id="send-message" class="text hidden">
+              <img src="/assets/svg/send.svg" alt="" />
+            </button>
           </div>
         </form>
-        <footer class="rounded-b-3xl">
-          <div class="flex justify-between px-2 py-2 text-xs rounded-b-3xl">
+        <footer>
+          <div class="flex justify-between px-2 py-2 text-xs">
             <p>
               Powered by
               <a href="#" class="underline-offset-2 underline">
@@ -283,16 +134,14 @@
               >
             </p>
             <div class="flex gap-2">
-              <a href="#" class="underline underline-offset-2">Feedback</a>
-              <a href="#" class="underline underline-offset-2">Volunteer</a>
+              <a href="#" class="underline underline-offset-3">Feedback</a>
+              <a href="#" class="underline underline-offset-3">Volunteer</a>
             </div>
           </div>
         </footer>
       </div>
     </div>
 
-    <!-- Emoji Mart script for emoji picker -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script> -->
     <!-- Custom script -->
     <script src="assets/script.js"></script>
   </body>
