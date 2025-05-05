@@ -4,8 +4,10 @@ import "./index.css";
 
 import App from "./App.tsx";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+const container = document.createElement("div");
+container.id = "react-root";
+document.body.appendChild(container);
+
+createRoot(container).render(<StrictMode>
     <App />
-  </StrictMode>
-);
+  </StrictMode>)
