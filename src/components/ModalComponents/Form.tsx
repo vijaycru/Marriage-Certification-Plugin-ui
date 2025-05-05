@@ -39,7 +39,12 @@ export const Form = ({
       ></textarea>
       <div className="chat-controls flex items-center justify-between p-2">
         <Mic className={textValue ? "hidden" : "block"} id="mic-button" />
-        <SendHorizontal className={textValue ? "block" : "hidden"} />
+        <SendHorizontal  onClick={(event) => {
+            if (formEvent.loading) return;
+            sendMessage(message);
+            setMessage("");
+            event.preventDefault();
+          }} className={textValue ? "block" : "hidden"} />
       </div>
     </div>
   );
