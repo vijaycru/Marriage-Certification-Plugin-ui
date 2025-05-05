@@ -12,7 +12,7 @@ export const Header = ({
   return (
     <header className="chat-header flex justify-between items-center border-b border-gray-200 px-4 py-3 bg-black">
       <div className="header-info flex items-center gap-3">
-        <CircleEllipsis className="text-white" size={40} />
+        <CircleEllipsis className="text-white" size={40} strokeWidth={1.5} />
         <h2 className="logo-text text-md font-semibold text-white text-underline">
           Ask Zen Citizen
         </h2>
