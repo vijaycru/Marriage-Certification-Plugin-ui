@@ -1,13 +1,11 @@
 import { ChevronDown, CircleEllipsis } from "lucide-react";
 
 interface BodyProps {
-  models: { label: string; value: string; disabled?: boolean }[];
   setTogglePopup: React.Dispatch<React.SetStateAction<boolean>>;
   togglePopup: boolean;
 }
 
 export const Header = ({
-  models,
   setTogglePopup,
   togglePopup,
 }: BodyProps) => {
