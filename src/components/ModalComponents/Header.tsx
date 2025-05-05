@@ -1,16 +1,12 @@
 import { ChevronDown, CircleEllipsis } from "lucide-react";
 
 interface BodyProps {
-  apiEndpoint: string;
-  setApiEndpoint: (endpoint: string) => void;
   models: { label: string; value: string; disabled?: boolean }[];
   setTogglePopup: React.Dispatch<React.SetStateAction<boolean>>;
   togglePopup: boolean;
 }
 
 export const Header = ({
-  apiEndpoint,
-  setApiEndpoint,
   models,
   setTogglePopup,
   togglePopup,
@@ -22,24 +18,7 @@ export const Header = ({
         <h2 className="logo-text text-md font-semibold text-white text-underline">
           Ask Zen Citizen
         </h2>
-        <span className="bg-gray-200 border rounded-md text-[#013df5]">
-          <select
-            onChange={(e) => setApiEndpoint(e.target.value)}
-            value={apiEndpoint}
-          >
-            {models.map((model) => (
-              <option
-                key={model.label}
-                value={model.value}
-                disabled={model.disabled}
-                defaultValue={models?.[0].value}
-                //   selected={apiEndpoint === model.value}
-              >
-                {model.label || model.value}
-              </option>
-            ))}
-          </select>
-        </span>
+        <span className="bg-gray-200 border px-2 rounded-md text-[#013df5]">Beta</span>
       </div>
       <ChevronDown
         className="text-white cursor-pointer"
